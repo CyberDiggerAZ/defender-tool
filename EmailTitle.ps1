@@ -47,7 +47,7 @@ Get-ADUser -Filter {EmailAddress -eq $_} -Properties DistinguishedName,Name,Disp
 
 
 #This section will use the MAILFound.txt from previous search.  
-#Result will include SRP matching proxy address but no title Info. Manual lookup of GAL needed for title search 
+#Result will include your organization's matching proxy address but no title Info. Manual lookup of GAL needed for title search 
 
 Get-Content C:\kpw\MAILfound.txt | ForEach-Object {
 $User = Get-ADUser -Filter {EmailAddress -eq $_} 
